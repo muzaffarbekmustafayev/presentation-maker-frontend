@@ -1,16 +1,64 @@
-# React + Vite
+# Presentation Maker — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite frontend for the Presentation Maker app.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** React 19
+- **Build tool:** Vite 8
+- **Routing:** React Router DOM 7
+- **Styling:** Tailwind CSS 4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **HTTP:** Axios
+- **Export:** PptxGenJS
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Install dependencies
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Configure API URL
+
+The API base URL is set in `src/api/axios.js`. By default it points to `http://localhost:5000`.
+
+### 3. Run the dev server
+
+```bash
+npm run dev
+```
+
+App runs on `http://localhost:5173` by default.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+frontend/
+├── index.html
+├── vite.config.js
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   ├── api/
+│   │   └── axios.js
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── ThemeContext.jsx
+│   └── pages/
+│       ├── Landing.jsx
+│       ├── Login.jsx
+│       ├── Register.jsx
+│       ├── Dashboard.jsx
+│       ├── CreatePresentation.jsx
+│       └── Editor.jsx
+└── public/
+```
